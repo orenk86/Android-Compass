@@ -52,7 +52,7 @@ public class CompassActivity extends Activity implements SensorEventListener{
 	public void onSensorChanged(SensorEvent event) {
 	    int orientation = (int) event.values[0]; // 
 	    Log.d("Compass", "Got sensor event: " + event.values[0]);
-	    rose.setDirection(-orientation); 
+	    rose.setDirection(360 - orientation); 
 		
 	}
 }
